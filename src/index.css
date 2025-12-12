@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-surface-300 text-gray-100;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-400;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyber-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cyber-400;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-cyber-500/30 text-cyber-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-300 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-cyber-500 to-neon-blue text-surface-300 hover:from-cyber-400 hover:to-void-500 h-12 py-3 px-6 font-semibold shadow-lg shadow-cyber-500/25 hover:shadow-cyber-400/40;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-cyber-500 text-cyber-400 bg-transparent hover:bg-cyber-500/10 hover:border-cyber-400 h-12 py-3 px-6 font-semibold;
+  }
+  
+  .btn-ghost {
+    @apply text-gray-300 hover:text-cyber-400 hover:bg-cyber-500/10 h-10 py-2 px-4;
+  }
+  
+  .input {
+    @apply flex h-12 w-full rounded-lg border-2 border-surface-50 bg-surface-200 px-4 py-3 text-sm text-gray-100 placeholder:text-gray-500 focus:outline-none focus:border-cyber-500 focus:ring-2 focus:ring-cyber-500/20 transition-all duration-300;
+  }
+  
+  .textarea {
+    @apply flex w-full rounded-lg border-2 border-surface-50 bg-surface-200 px-4 py-3 text-sm text-gray-100 placeholder:text-gray-500 focus:outline-none focus:border-cyber-500 focus:ring-2 focus:ring-cyber-500/20 transition-all duration-300 resize-none;
+  }
+  
+  .card {
+    @apply rounded-xl border border-surface-50 bg-surface-100/50 backdrop-blur-sm shadow-xl;
+  }
+  
+  .card-glow {
+    @apply rounded-xl border border-cyber-500/20 bg-surface-100/80 backdrop-blur-sm shadow-xl hover:border-cyber-500/40 hover:shadow-cyber-500/10 transition-all duration-500;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-display font-bold bg-gradient-to-r from-cyber-400 via-neon-blue to-neon-purple bg-clip-text text-transparent;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyber-400 to-neon-blue bg-clip-text text-transparent;
+  }
+
+  .tech-tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-cyber-500/10 text-cyber-400 border border-cyber-500/30;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism */
+  .glass {
+    @apply bg-surface-100/30 backdrop-blur-md border border-white/10;
+  }
+
+  /* Grid background */
+  .bg-grid {
+    background-image: 
+      linear-gradient(rgba(0, 245, 212, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 212, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Scan line effect */
+  .scan-lines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1) 0px,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Gradient borders */
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(135deg, #00f5d4, #3a86ff, #8338ec);
+    padding: 2px;
+    border-radius: 0.75rem;
+  }
+
+  .gradient-border > * {
+    background: #0b0e14;
+    border-radius: 0.65rem;
+  }
+
+  /* Text glow effect */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 245, 212, 0.5), 0 0 20px rgba(0, 245, 212, 0.3);
+  }
+
+  /* Stagger animation delays */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+  .stagger-7 { animation-delay: 0.7s; }
+  .stagger-8 { animation-delay: 0.8s; }
+
+  /* Hover lift effect */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyber-500/10;
+  }
+
+  /* Terminal cursor */
+  .terminal-cursor::after {
+    content: '▋';
+    animation: blink 1s step-end infinite;
+    @apply text-cyber-400 ml-1;
+  }
+
+  @keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Noise texture overlay */
+  .noise::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.02;
+    pointer-events: none;
+    z-index: 100;
+  }
+}
+
