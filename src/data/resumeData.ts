@@ -196,7 +196,7 @@ export const projects = [
     type: "Freelance"
   },
   {
-    id: 8,
+    id: 3,
     title: "Grande Vista Ranch",
     role: "Full Stack Developer",
     description: "Built a custom React/Node e-commerce platform with Printful API integration for print-on-demand merchandise. Developed product catalog system with real-time inventory sync via Printful webhooks. Implemented secure payment processing and automated order fulfillment through the Printful API.",
@@ -204,7 +204,7 @@ export const projects = [
     type: "Freelance"
   },
   {
-    id: 3,
+    id: 4,
     title: "KTBlack Services Platform",
     role: "Lead Fullstack Developer/QA",
     description: "Architected and developed a full stack application to replace the KTBlack Legacy Salesforce solution. Built frontend and backend with React (Vite, TypeScript, MUI), Node, AWS EC2. Developed an Angular messaging system using WebSockets within Salesforce for internal and external communication. Established DevOps norms and modern engineering practices including version control, agile development, and scrum.",
@@ -212,7 +212,7 @@ export const projects = [
     type: "Enterprise"
   },
   {
-    id: 4,
+    id: 5,
     title: "Saint Francis Ministries",
     role: "WordPress Developer & Content Creator",
     description: "Created the Saint Francis Ministries website for volunteer and donation portal for a school for the deaf in Nyapea, Uganda. The platform increased donations by over $20,000 in 2017 and $45,000 in 2022. Traveled to Uganda with Founder Rannah Evetts, helped with day-to-day operations, and created social media content.",
@@ -220,7 +220,7 @@ export const projects = [
     type: "Non-Profit"
   },
   {
-    id: 5,
+    id: 6,
     title: "Audiohook Platform",
     role: "Fullstack Engineer/QA Lead",
     description: "Developed end-to-end features across the Python Flask API, GraphQL, and React frontend. Created Audiohook's CI/CD testing pipeline and Test Driven Development practices, transitioning from CircleCI to GitHub Actions with AWS & Terraform deployments. Led UI & QA testing through Preflight and Rainforest QA, wrote and maintained Jest unit tests for frontend, and built automated API testing with Pytest for the Flask API and Snowflake integrations.",
@@ -228,7 +228,7 @@ export const projects = [
     type: "Enterprise"
   },
   {
-    id: 6,
+    id: 7,
     title: "Randall County Rentals",
     role: "WordPress Developer",
     description: "Maintained and expanded property management site, created media content, and integrated real estate WordPress tools. Integrated Real Estate Management plugin for WordPress with mailing service and appointment reminders. Created photography and videography content for property listings.",
@@ -236,7 +236,7 @@ export const projects = [
     type: "Freelance"
   },
   {
-    id: 7,
+    id: 8,
     title: "Andrews & Associates WordPress Phoenix Project",
     role: "Fullstack Developer / Systems Architect",
     description: "Designed a modern full stack architecture to replace a legacy WordPress ecosystem, emphasizing scalable React, Node, and Python services. Rebuilt and optimized WordPress legacy systems, WHM cPanel, and Linux-based infrastructure to reduce technical debt and improve maintainability. Built internal tooling and automated workflows using CI/CD, AWS, Azure, and GitHub Actions.",
