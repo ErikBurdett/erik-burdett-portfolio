@@ -46,7 +46,7 @@ export const experience = [
     id: 0,
     company: "Dharma Web Solutions",
     role: "Owner / Lead Full Stack Developer",
-    period: "December 2024 - Present",
+    period: "December 2015 - Present",
     type: "Full-time",
     technologies: ["React", "Next.js", "Node.js", "Python", "TypeScript", "AWS", "WordPress", "Custom PHP", "Plugin Development", "API Integrations"],
     highlights: [

@@ -163,7 +163,7 @@ const Home = () => {
                       <span className="ml-8 text-cyber-400">"React", "Node.js", "Python",</span><br />
                       <span className="ml-8 text-cyber-400">"API Integrations", "WordPress", "AWS"</span><br />
                       <span className="ml-4">],</span><br />
-                      <span className="ml-4"><span className="text-neon-pink">"passion"</span>: <span className="text-cyber-400">"Building great software"</span></span><br />
+                      <span className="ml-4"><span className="text-neon-pink">"passion"</span>: <span className="text-cyber-400">"Building great software for real world impact."</span></span><br />
                       <span className="text-gray-500">{'}'}</span>
                     </div>
                     <div className="flex items-center text-gray-500">
