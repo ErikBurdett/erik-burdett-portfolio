@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Terminal, Code2, Server, Cloud, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Terminal, Code2, Server, Cloud, Github, Linkedin, Mail, Plug } from 'lucide-react';
 import { personalInfo, skills, experience, freelanceExperience } from '../data/resumeData';
 
 const Home = () => {
@@ -82,7 +82,7 @@ const Home = () => {
                 className="text-gray-400 text-lg mb-8 max-w-xl leading-relaxed"
               >
                 I build scalable web applications with <span className="text-cyber-400">React</span>, <span className="text-neon-blue">Node.js</span>, 
-                and <span className="text-neon-purple">Python</span>. Expert in <span className="text-cyber-400">WordPress</span> development including custom themes, 
+                and <span className="text-neon-purple">Python</span>. Expert in <span className="text-cyber-400">API integrations</span>, <span className="text-cyber-400">WordPress</span> development including custom themes, 
                 plugin development, and PHP integrations. Experienced in DevOps, CI/CD pipelines, 
                 and cloud infrastructure with <span className="text-cyber-400">AWS</span> & <span className="text-neon-blue">Azure</span>.
               </motion.p>
@@ -161,7 +161,7 @@ const Home = () => {
                       <span className="ml-4"><span className="text-neon-pink">"location"</span>: <span className="text-cyber-400">"{personalInfo.location}"</span>,</span><br />
                       <span className="ml-4"><span className="text-neon-pink">"skills"</span>: [</span><br />
                       <span className="ml-8 text-cyber-400">"React", "Node.js", "Python",</span><br />
-                      <span className="ml-8 text-cyber-400">"WordPress", "PHP", "AWS"</span><br />
+                      <span className="ml-8 text-cyber-400">"API Integrations", "WordPress", "AWS"</span><br />
                       <span className="ml-4">],</span><br />
                       <span className="ml-4"><span className="text-neon-pink">"passion"</span>: <span className="text-cyber-400">"Building great software"</span></span><br />
                       <span className="text-gray-500">{'}'}</span>
@@ -202,13 +202,14 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="grid grid-cols-2 md:grid-cols-5 gap-8"
           >
             {[
               { icon: Code2, label: "Frontend", value: "React / Next.js", color: "text-cyber-400" },
               { icon: Server, label: "Backend", value: "Node / Python", color: "text-neon-blue" },
               { icon: Cloud, label: "Cloud", value: "AWS / Azure", color: "text-neon-purple" },
               { icon: Terminal, label: "DevOps", value: "CI/CD / Docker", color: "text-neon-pink" },
+              { icon: Plug, label: "APIs", value: "REST / GraphQL", color: "text-cyber-400" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

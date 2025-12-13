@@ -113,7 +113,7 @@ function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="fixed right-0 top-0 bottom-0 w-72 bg-surface-200 border-l border-surface-50 z-50 md:hidden"
+              className="fixed right-0 top-0 bottom-0 w-72 bg-surface-300 border-l border-surface-50 z-50 md:hidden shadow-2xl"
             >
               <div className="p-6">
                 <div className="flex justify-between items-center mb-8">

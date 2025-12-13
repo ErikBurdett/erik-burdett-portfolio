@@ -25,6 +25,15 @@ const skillCategories = [
     skills: skills.categories.backend,
   },
   {
+    title: 'API Development',
+    icon: Zap,
+    color: 'from-cyber-400 to-neon-blue',
+    bgColor: 'bg-cyber-400/10',
+    borderColor: 'border-cyber-400/30',
+    iconColor: 'text-cyber-400',
+    skills: skills.categories.api,
+  },
+  {
     title: 'WordPress & PHP',
     icon: Layers,
     color: 'from-neon-blue to-cyber-400',

@@ -14,7 +14,7 @@ export const skills = {
   technical: [
     "React", "Next.js", "Node.js", "Express", "PHP",
     "Python", "TypeScript", "JavaScript",
-    "GraphQL", "REST APIs",
+    "GraphQL", "REST APIs", "API Integrations",
     "AWS", "Azure", "Docker",
     "GitHub Actions", "CI/CD",
     "PostgreSQL", "SQL Server",
@@ -22,11 +22,12 @@ export const skills = {
     "Jest", "Pytest", "Selenium",
     "WordPress", "Custom WordPress Themes",
     "WordPress Plugin Development", "Custom PHP Development",
-    "Microservices", "Agile/Scrum"
+    "Microservices", "Agile/Scrum", "Data Analysis"
   ],
   categories: {
     frontend: ["React", "Next.js", "TypeScript", "JavaScript", "Vite", "MUI"],
     backend: ["Node.js", "Express", "Python", "Flask", "PHP", "GraphQL", "REST APIs", "Microservices"],
+    api: ["REST API Development", "GraphQL", "API Integrations", "Third-Party APIs", "Webhook Development", "OAuth", "API Testing"],
     devops: ["AWS", "Azure", "Docker", "GitHub Actions", "CI/CD", "Terraform", "Linux", "WHM cPanel"],
     database: ["PostgreSQL", "SQL Server", "Snowflake"],
     testing: ["Jest", "Pytest", "Selenium", "Preflight", "Rainforest QA", "Automated UI Testing", "API Testing"],
@@ -47,10 +48,11 @@ export const experience = [
     role: "Owner / Lead Full Stack Developer",
     period: "December 2024 - Present",
     type: "Full-time",
-    technologies: ["React", "Next.js", "Node.js", "Python", "TypeScript", "AWS", "WordPress", "Custom PHP", "Plugin Development"],
+    technologies: ["React", "Next.js", "Node.js", "Python", "TypeScript", "AWS", "WordPress", "Custom PHP", "Plugin Development", "API Integrations"],
     highlights: [
       "Founded and operate a full-service web development consultancy specializing in custom web applications and WordPress solutions",
       "Deliver end-to-end development services including custom React/Node applications, WordPress theme and plugin development, and cloud deployments",
+      "Build custom API integrations and third-party service connections for e-commerce, payment processing, and business automation",
       "Provide DevOps consulting, CI/CD pipeline setup, and infrastructure optimization for small to mid-sized businesses",
       "Specialize in migrating legacy systems to modern tech stacks while maintaining business continuity",
       "Offer technical consulting, code audits, and architecture planning for clients across various industries"
@@ -62,15 +64,17 @@ export const experience = [
     role: "Fullstack Developer",
     period: "September 2024 - Present",
     type: "Full-time",
-    technologies: ["React", "Node", "Python", "AWS", "Azure", "GitHub Actions", "CI/CD", "WordPress", "Linux"],
+    technologies: ["React", "Node", "Python", "AWS", "Azure", "GitHub Actions", "CI/CD", "WordPress", "Linux", "API Integrations"],
     highlights: [
+      "Maintained and managed 127 client websites across WordPress, custom PHP, and modern React/Node applications",
+      "Handled client relations and technical web communications, serving as primary point of contact for web development needs",
       "Designed modern full stack architecture to replace legacy WordPress ecosystem with scalable React, Node, and Python services",
+      "Built and maintained API integrations connecting client systems with third-party services and internal tools",
       "Rebuilt and optimized WordPress legacy systems, WHM cPanel, and Linux-based infrastructure to reduce technical debt and improve maintainability",
       "Built internal tooling and automated workflows using CI/CD, AWS, Azure, and GitHub Actions",
       "Implemented QA standards, documentation practices, and team development methodologies",
       "Mentored distributed teams and coordinated cross-department collaboration between IT support and development",
-      "Came on as the company's first web developer and helped build a modern development team to alleviate IT support and field technicians of development duties",
-      "Data analysis and utility scripting with Python, Flask, Node, and React"
+      "Came on as the company's first web developer and helped build a modern development team to alleviate IT support and field technicians of development duties"
     ]
   },
   {
@@ -79,10 +83,11 @@ export const experience = [
     role: "Lead Fullstack Developer/QA",
     period: "October 2022 - September 2023",
     type: "Full-time",
-    technologies: ["React", "Vite", "TypeScript", "MUI", "Node", "AWS EC2", "Salesforce", "Angular", "WebSockets"],
+    technologies: ["React", "Vite", "TypeScript", "MUI", "Node", "AWS EC2", "Salesforce", "Angular", "WebSockets", "API Integrations"],
     highlights: [
       "Architected and developed full stack application to replace legacy Salesforce solution",
       "Built frontend and backend with React (Vite, TypeScript, MUI), Node, AWS EC2",
+      "Developed custom API integrations between the new platform and existing Salesforce systems",
       "Developed Angular messaging system using WebSockets within Salesforce",
       "Established DevOps norms and modern engineering practices",
       "Set up QA methodologies, initial CI/CD and automated testing systems",
@@ -96,10 +101,11 @@ export const experience = [
     role: "Fullstack Engineer/QA Lead",
     period: "September 2021 - May 2022",
     type: "Remote",
-    technologies: ["Python", "Flask", "React", "TypeScript", "GraphQL", "AWS", "Terraform", "Jest", "Pytest"],
+    technologies: ["Python", "Flask", "React", "TypeScript", "GraphQL", "AWS", "Terraform", "Jest", "Pytest", "API Development"],
     highlights: [
+      "Developed end-to-end features across Python Flask API, GraphQL, and React frontend",
+      "Built and maintained RESTful and GraphQL API endpoints for audio advertising platform",
       "Created CI/CD testing pipeline & Test Driven Development practices with CircleCI, then GitActions",
-      "Developed and maintained features across Python Flask API, GraphQL, and React frontend",
       "UI & QA testing through Preflight and Rainforest QA, plus Jest unit tests",
       "API QA & Testing with Python Flask, Snowflake, SQL, and Pytest",
       "Wrote documentation for bug fixes, onboarding, feature documentation, and DevOps practices"
@@ -125,14 +131,29 @@ export const freelanceExperience = [
     company: "EightyTwenty",
     role: "Lead Full Stack Developer",
     period: "July 2019 - Present",
+    technologies: ["React", "Node.js", "API Integrations", "Data Analysis"],
     highlights: [
       "Migrated business site from Squarespace → WordPress → fully custom React/Node platform with online ordering and POS integration",
-      "Integrated Toast POS, Square, Stripe, PayPal, Venmo, and Cash App for unified payment processing",
-      "Built automated workflows linking Google Sheets/Forms to backend systems"
+      "Integrated Toast POS, Square, Stripe, PayPal, Venmo, and Cash App APIs for unified payment processing",
+      "Built automated workflows linking Google Sheets/Forms to backend systems via API integrations",
+      "Perform data analysis on sales, inventory, and customer data to inform business decisions",
+      "Manage data responsibilities including reporting, analytics dashboards, and business intelligence"
     ]
   },
   {
     id: 2,
+    company: "Grande Vista Ranch",
+    role: "Full Stack Developer",
+    period: "2023 - Present",
+    technologies: ["React", "Node.js", "Printful API", "E-commerce", "API Integrations"],
+    highlights: [
+      "Built custom React/Node e-commerce platform with Printful API integration for print-on-demand merchandise",
+      "Developed product catalog system with real-time inventory sync via Printful webhooks",
+      "Implemented secure payment processing and order fulfillment automation"
+    ]
+  },
+  {
+    id: 3,
     company: "Randall County Rentals",
     role: "WordPress Developer",
     period: "January 2019 - February 2022",
@@ -143,7 +164,7 @@ export const freelanceExperience = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     company: "Saint Francis De Sales School for The Deaf",
     role: "WordPress Developer & Content Creator",
     period: "December 2016 - April 2023",
@@ -170,8 +191,16 @@ export const projects = [
     id: 2,
     title: "EightyTwenty Platform",
     role: "Lead Full Stack Developer",
-    description: "Migrated business site from Squarespace → WordPress → fully custom React/Node platform with online ordering and POS integration. Integrated Toast POS, Square, Stripe, PayPal, Venmo, and Cash App for unified payment processing. Built automated workflows linking Google Sheets/Forms to backend systems.",
-    technologies: ["React", "Node.js", "Toast POS", "Stripe", "Square", "PayPal", "Google Sheets API"],
+    description: "Migrated business site from Squarespace → WordPress → fully custom React/Node platform with online ordering and POS integration. Integrated Toast POS, Square, Stripe, PayPal, Venmo, and Cash App APIs for unified payment processing. Built automated workflows linking Google Sheets/Forms to backend systems. Perform ongoing data analysis on sales, inventory, and customer data to inform business decisions and manage data reporting and analytics dashboards.",
+    technologies: ["React", "Node.js", "Toast POS API", "Stripe API", "Square API", "PayPal API", "Google Sheets API", "Data Analysis"],
+    type: "Freelance"
+  },
+  {
+    id: 8,
+    title: "Grande Vista Ranch",
+    role: "Full Stack Developer",
+    description: "Built a custom React/Node e-commerce platform with Printful API integration for print-on-demand merchandise. Developed product catalog system with real-time inventory sync via Printful webhooks. Implemented secure payment processing and automated order fulfillment through the Printful API.",
+    technologies: ["React", "Node.js", "Printful API", "E-commerce", "Webhooks", "Payment Processing", "API Integrations"],
     type: "Freelance"
   },
   {
