@@ -131,5 +131,5 @@ MIT License - feel free to use this template for your own portfolio!
 
 ---
 
-**Erik Burdett** | Full Stack Developer | [GitHub](https://github.com/ErikBurdett) | [LinkedIn](https://linkedin.com/in/erikburdett)
+**Erik Burdett** | Full Stack Developer | [GitHub](https://github.com/ErikBurdett) | [LinkedIn](https://www.linkedin.com/in/eaburdett/)
 

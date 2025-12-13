@@ -6,7 +6,7 @@ export const personalInfo = {
   phone: "806-677-4249",
   email: "erikaburdet@gmail.com",
   github: "https://github.com/ErikBurdett",
-  linkedin: "https://linkedin.com/in/erikburdett",
+  linkedin: "https://www.linkedin.com/in/eaburdett/",
   resumePdf: "/Erik-Burdett-Resume-2025.pdf",
 };
 
@@ -66,8 +66,8 @@ export const experience = [
     type: "Full-time",
     technologies: ["React", "Node", "Python", "AWS", "Azure", "GitHub Actions", "CI/CD", "WordPress", "Linux", "API Integrations"],
     highlights: [
-      "Maintained and managed 127 client websites across WordPress, custom PHP, and modern React/Node applications",
-      "Handled client relations and technical web communications, serving as primary point of contact for web development needs",
+      "Maintained and managed 127 client websites across WordPress, custom PHP, and modern React/Node applications - diagnosed technical debt and optimized WordPress legacy systems, WHM cPanel, and Linux-based infrastructure to reduce technical debt and improve maintainability",
+      "Handled client relations and technical web communications, serving as a primary point of contact for web development needs",
       "Designed modern full stack architecture to replace legacy WordPress ecosystem with scalable React, Node, and Python services",
       "Built and maintained API integrations connecting client systems with third-party services and internal tools",
       "Rebuilt and optimized WordPress legacy systems, WHM cPanel, and Linux-based infrastructure to reduce technical debt and improve maintainability",
@@ -85,7 +85,7 @@ export const experience = [
     type: "Full-time",
     technologies: ["React", "Vite", "TypeScript", "MUI", "Node", "AWS EC2", "Salesforce", "Angular", "WebSockets", "API Integrations"],
     highlights: [
-      "Architected and developed full stack application to replace legacy Salesforce solution",
+      "Architected and developed full stack application to replace legacy Salesforce solution while mentoring junior devs on modern development practices",
       "Built frontend and backend with React (Vite, TypeScript, MUI), Node, AWS EC2",
       "Developed custom API integrations between the new platform and existing Salesforce systems",
       "Developed Angular messaging system using WebSockets within Salesforce",
