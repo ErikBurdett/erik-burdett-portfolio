@@ -3,36 +3,189 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Terminal, Code2, Server, Cloud, Github, Linkedin, Mail, Plug } from 'lucide-react';
 import { personalInfo, skills, experience, freelanceExperience } from '../data/resumeData';
 
+// Grid configuration for animated light lines
+const gridLines = {
+  horizontal: [20, 40, 60, 80], // Y positions in %
+  vertical: [20, 40, 60, 80],   // X positions in %
+};
+
+// Floating orbs configuration (scaled back)
+const floatingOrbs = [
+  { x: 15, y: 20, size: 'w-2.5 h-2.5', color: 'bg-cyber-500', delay: 0, duration: 4 },
+  { x: 80, y: 25, size: 'w-2 h-2', color: 'bg-neon-purple', delay: 1, duration: 5 },
+  { x: 25, y: 55, size: 'w-2 h-2', color: 'bg-neon-blue', delay: 0.5, duration: 4.5 },
+  { x: 70, y: 60, size: 'w-1.5 h-1.5', color: 'bg-cyber-400', delay: 2, duration: 5 },
+  { x: 45, y: 80, size: 'w-2 h-2', color: 'bg-neon-purple', delay: 1.5, duration: 4 },
+  { x: 85, y: 75, size: 'w-2 h-2', color: 'bg-cyber-500', delay: 0.8, duration: 3.5 },
+  { x: 55, y: 35, size: 'w-1.5 h-1.5', color: 'bg-neon-blue', delay: 2.5, duration: 5.5 },
+];
+
 const Home = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        {/* Animated grid lines with traveling lights */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="cyberLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(0, 245, 212, 0.05)" />
+                <stop offset="50%" stopColor="rgba(0, 245, 212, 0.15)" />
+                <stop offset="100%" stopColor="rgba(0, 245, 212, 0.05)" />
+              </linearGradient>
+              <linearGradient id="purpleLineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="rgba(131, 56, 236, 0.05)" />
+                <stop offset="50%" stopColor="rgba(131, 56, 236, 0.15)" />
+                <stop offset="100%" stopColor="rgba(131, 56, 236, 0.05)" />
+              </linearGradient>
+            </defs>
+            
+            {/* Horizontal grid lines */}
+            {gridLines.horizontal.map((y, i) => (
+              <motion.line
+                key={`h-line-${i}`}
+                x1="0%"
+                y1={`${y}%`}
+                x2="100%"
+                y2={`${y}%`}
+                stroke="url(#cyberLineGradient)"
+                strokeWidth="1"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0.3, 0.6, 0.3] }}
+                transition={{ 
+                  duration: 4 + (i % 3),
+                  repeat: Infinity,
+                  delay: i * 0.3
+                }}
+              />
+            ))}
+            
+            {/* Vertical grid lines */}
+            {gridLines.vertical.map((x, i) => (
+              <motion.line
+                key={`v-line-${i}`}
+                x1={`${x}%`}
+                y1="0%"
+                x2={`${x}%`}
+                y2="100%"
+                stroke="url(#purpleLineGradient)"
+                strokeWidth="1"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0.3, 0.6, 0.3] }}
+                transition={{ 
+                  duration: 5 + (i % 2),
+                  repeat: Infinity,
+                  delay: i * 0.4
+                }}
+              />
+            ))}
+
+            {/* Traveling light pulses on horizontal lines */}
+            {gridLines.horizontal.slice(0, 2).map((y, i) => (
+              <motion.circle
+                key={`h-pulse-${i}`}
+                r="4"
+                fill="rgba(0, 245, 212, 0.9)"
+                filter="blur(2px)"
+                initial={{ cx: '0%', cy: `${y}%`, opacity: 0 }}
+                animate={{ 
+                  cx: ['0%', '100%'],
+                  opacity: [0, 1, 1, 0],
+                }}
+                transition={{ 
+                  duration: 5 + i,
+                  repeat: Infinity,
+                  delay: i * 3,
+                  ease: "linear"
+                }}
+              />
+            ))}
+
+            {/* Traveling light pulses on vertical lines */}
+            {gridLines.vertical.slice(0, 2).map((x, i) => (
+              <motion.circle
+                key={`v-pulse-${i}`}
+                r="4"
+                fill="rgba(131, 56, 236, 0.9)"
+                filter="blur(2px)"
+                initial={{ cx: `${x}%`, cy: '0%', opacity: 0 }}
+                animate={{ 
+                  cy: ['0%', '100%'],
+                  opacity: [0, 1, 1, 0],
+                }}
+                transition={{ 
+                  duration: 6 + i,
+                  repeat: Infinity,
+                  delay: i * 3.5 + 1,
+                  ease: "linear"
+                }}
+              />
+            ))}
+
+            {/* Additional blue traveling light */}
+            <motion.circle
+              r="3"
+              fill="rgba(58, 134, 255, 0.85)"
+              filter="blur(1px)"
+              initial={{ cx: '100%', cy: `${gridLines.horizontal[3]}%`, opacity: 0 }}
+              animate={{ 
+                cx: ['100%', '0%'],
+                opacity: [0, 1, 1, 0],
+              }}
+              transition={{ 
+                duration: 6,
+                repeat: Infinity,
+                delay: 4,
+                ease: "linear"
+              }}
+            />
+          </svg>
+        </div>
+
+        {/* Floating color orbs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {floatingOrbs.map((orb, i) => (
+            <motion.div
+              key={`orb-${i}`}
+              className={`absolute ${orb.size} ${orb.color} rounded-full`}
+              style={{ left: `${orb.x}%`, top: `${orb.y}%` }}
+              animate={{ 
+                scale: [1, 1.8, 1],
+                opacity: [0.4, 0.9, 0.4],
+                boxShadow: [
+                  '0 0 10px currentColor',
+                  '0 0 25px currentColor',
+                  '0 0 10px currentColor'
+                ]
+              }}
+              transition={{ 
+                duration: orb.duration,
+                repeat: Infinity,
+                delay: orb.delay,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Larger ambient glow orbs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div 
-            className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyber-500 rounded-full"
+            className="absolute top-1/4 left-1/4 w-72 h-72 bg-cyber-500/8 rounded-full blur-3xl"
             animate={{ 
-              scale: [1, 1.5, 1],
-              opacity: [0.5, 1, 0.5]
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.5, 0.3]
             }}
-            transition={{ duration: 3, repeat: Infinity }}
+            transition={{ duration: 8, repeat: Infinity }}
           />
           <motion.div 
-            className="absolute top-1/3 right-1/3 w-1 h-1 bg-neon-purple rounded-full"
+            className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-neon-purple/8 rounded-full blur-3xl"
             animate={{ 
-              scale: [1, 2, 1],
-              opacity: [0.3, 0.8, 0.3]
+              scale: [1.1, 1, 1.1],
+              opacity: [0.3, 0.2, 0.3]
             }}
-            transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-          />
-          <motion.div 
-            className="absolute bottom-1/4 right-1/4 w-1.5 h-1.5 bg-neon-blue rounded-full"
-            animate={{ 
-              scale: [1, 1.8, 1],
-              opacity: [0.4, 0.9, 0.4]
-            }}
-            transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}
+            transition={{ duration: 10, repeat: Infinity, delay: 2 }}
           />
         </div>
 

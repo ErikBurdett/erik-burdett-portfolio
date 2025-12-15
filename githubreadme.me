@@ -26,9 +26,8 @@ Beyond code, I'm a photographer, writer, and digital creator. I believe technolo
 | Role | Company | Focus |
 |------|---------|-------|
 | **Owner / Lead Developer** | Dharma Web Solutions | Custom web apps, WordPress solutions, API integrations |
-| **Fullstack Developer** | Andrews & Associates L.T. Solutions | Managing 127+ client websites, DevOps, legacy modernization |
 | **Lead Developer** | EightyTwenty | Custom React/Node platform with POS & payment integrations |
-| **Developer** | Grande Vista Ranch | E-commerce platform with Printful API integration |
+| **Lead Developer** | Grande Vista Ranch | E-commerce platform with Printful API integration |
 
 ---
 
@@ -61,7 +60,7 @@ WordPress:    Custom Themes • Plugin Development • WooCommerce • PHP
 
 ### 💼 Experience Highlights
 
-**🏢 Andrews & Associates L.T. Solutions** *(Sept 2024 - Present)*
+**🏢 Andrews & Associates L.T. Solutions** *(Sept 2024 - July 2025)*
 - Managed 127+ client websites across WordPress, PHP, and React/Node
 - Designed modern full stack architecture to replace legacy WordPress ecosystem
 - Built API integrations and automated workflows with CI/CD, AWS, Azure
