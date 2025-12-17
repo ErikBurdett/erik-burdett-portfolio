@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, CheckCircle, AlertCircle, Briefcase, ExternalLink } from 'lucide-react';
 import { personalInfo } from '../data/resumeData';
 
 interface ContactFormData {
@@ -12,7 +12,7 @@ interface ContactFormData {
 }
 
 // Web3Forms access key
-const WEB3FORMS_ACCESS_KEY = 'b6365156-5c3c-48fe-8e4a-5d37ccb466e4';
+const WEB3FORMS_ACCESS_KEY = '0a6dc88d-8880-4d24-9ef1-c7645b6f0af4';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -140,6 +140,31 @@ const Contact = () => {
                   <p className="text-gray-200">{personalInfo.location}</p>
                 </div>
               </div>
+            </div>
+
+            {/* Dharma Web Solutions Consultancy */}
+            <div className="p-5 rounded-xl bg-gradient-to-br from-neon-purple/10 to-cyber-500/10 border border-neon-purple/30">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-neon-purple/20 flex items-center justify-center">
+                  <Briefcase className="w-5 h-5 text-neon-purple" />
+                </div>
+                <div>
+                  <p className="text-gray-200 font-semibold">Consultancy & Business Inquiries</p>
+                  <p className="text-gray-500 text-sm">Through Dharma Web Solutions</p>
+                </div>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Looking for professional web development services? Explore consultancy options and business inquiries through my company.
+              </p>
+              <a
+                href="https://dharmawebsolutions.com/services"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-neon-purple/20 border border-neon-purple/40 text-neon-purple hover:bg-neon-purple/30 hover:border-neon-purple/60 transition-all duration-300 text-sm font-medium"
+              >
+                View Services
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
 
             {/* Social Links */}

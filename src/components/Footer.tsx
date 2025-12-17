@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, Phone, MapPin, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MapPin, FileText, Briefcase } from 'lucide-react';
 import { personalInfo } from '../data/resumeData';
 
 const Footer = () => {
@@ -87,6 +87,17 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <a 
+                  href="https://dharmawebsolutions.com/services"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-neon-purple transition-colors flex items-center gap-2 group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-neon-purple transition-colors" />
+                  Consultancy Services
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -124,6 +135,17 @@ const Footer = () => {
                 >
                   <FileText className="w-4 h-4 text-gray-500 group-hover:text-cyber-500 transition-colors" />
                   <span className="text-sm">Download Resume</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://dharmawebsolutions.com/services"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-neon-purple transition-colors flex items-center gap-3 group"
+                >
+                  <Briefcase className="w-4 h-4 text-gray-500 group-hover:text-neon-purple transition-colors" />
+                  <span className="text-sm">Dharma Web Solutions</span>
                 </a>
               </li>
             </ul>

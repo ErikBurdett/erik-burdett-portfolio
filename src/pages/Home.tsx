@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Terminal, Code2, Server, Cloud, Github, Linkedin, Mail, Plug } from 'lucide-react';
+import { ArrowRight, Terminal, Code2, Server, Cloud, Github, Linkedin, Mail, Plug, Briefcase } from 'lucide-react';
 import { personalInfo, skills, experience, freelanceExperience } from '../data/resumeData';
 
 // Grid configuration for animated light lines
@@ -547,6 +547,15 @@ const Home = () => {
                 Get In Touch
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
+              <a 
+                href="https://dharmawebsolutions.com/services"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline border-neon-purple/50 text-neon-purple hover:bg-neon-purple/10 hover:border-neon-purple"
+              >
+                <Briefcase className="w-4 h-4 mr-2" />
+                Consultancy Services
+              </a>
               <a 
                 href={personalInfo.github}
                 target="_blank"
